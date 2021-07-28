@@ -160,7 +160,7 @@ def user_post(username):
 
 def send_email(user):
     token = user.get_reset_token()
-    msg = Message('Password Reset Request', sender='smartattendancesol@gmail.com', recipients=[user.email])
+    msg = Message('Password Reset Request', sender='demo@gmail.com', recipients=[user.email])
 
     msg.body = f'''To reset password, visit following link:
 {url_for('reset_token', token=token, _external=True)}
